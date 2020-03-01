@@ -39,7 +39,7 @@ struct Currency: Codable {
 
 // MARK: - Language
 struct Language: Codable {
-    let iso6391, iso6392, name, nativeName: String
+    let iso6391, iso6392, name, nativeName: String?
 
     enum CodingKeys: String, CodingKey {
         case iso6391 = "iso639_1"

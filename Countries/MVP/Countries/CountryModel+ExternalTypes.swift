@@ -12,7 +12,7 @@ import Foundation
 extension CountryModel {
     static func fromCountryJsonModel(jsonModel: Country) -> CountryModel {
         let languagesModel = jsonModel.languages.map {
-            LanguageModel(name: $0.name, nativeName: $0.nativeName)
+            LanguageModel(name: $0.name ?? "", nativeName: $0.nativeName ?? "")
         }
 
         return CountryModel(countryName: jsonModel.name,

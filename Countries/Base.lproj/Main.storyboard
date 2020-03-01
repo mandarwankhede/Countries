@@ -16,28 +16,25 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="countryCell" rowHeight="100" id="ebO-Pe-3tx" customClass="CountryTableViewCell" customModule="Countries" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="414" height="100"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="countryCell" rowHeight="80" id="ebO-Pe-3tx" customClass="CountryTableViewCell" customModule="Countries" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="80"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ebO-Pe-3tx" id="IDb-Qw-E6o">
-                                    <rect key="frame" x="0.0" y="0.0" width="383" height="100"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="383" height="80"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j0I-uc-Ob9">
-                                            <rect key="frame" x="7" y="15" width="342" height="21"/>
-                                            <constraints>
-                                                <constraint firstAttribute="height" constant="21" id="b7G-Rw-lmx"/>
-                                            </constraints>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j0I-uc-Ob9">
+                                            <rect key="frame" x="28" y="30" width="239" height="20.5"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lng-cT-f4n">
-                                            <rect key="frame" x="330" y="27.5" width="45" height="45"/>
+                                            <rect key="frame" x="275" y="16" width="100" height="48"/>
                                             <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <constraints>
-                                                <constraint firstAttribute="height" constant="45" id="C7M-JZ-hRZ"/>
-                                                <constraint firstAttribute="width" constant="45" id="Mvt-80-3tW"/>
+                                                <constraint firstAttribute="height" constant="80" id="Mo9-8I-tV5"/>
+                                                <constraint firstAttribute="width" constant="100" id="bpf-h7-DKT"/>
                                             </constraints>
                                             <wkWebViewConfiguration key="configuration">
                                                 <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
@@ -46,11 +43,12 @@
                                         </wkWebView>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="j0I-uc-Ob9" firstAttribute="top" secondItem="IDb-Qw-E6o" secondAttribute="top" constant="15" id="4Sx-Ce-rTi"/>
-                                        <constraint firstAttribute="bottom" secondItem="j0I-uc-Ob9" secondAttribute="bottom" constant="14" id="9Hh-9l-rDw"/>
-                                        <constraint firstItem="j0I-uc-Ob9" firstAttribute="leading" secondItem="IDb-Qw-E6o" secondAttribute="leading" constant="7" id="gEf-Ak-YLh"/>
-                                        <constraint firstAttribute="trailing" secondItem="Lng-cT-f4n" secondAttribute="trailing" constant="8" id="gvF-vs-HVs"/>
-                                        <constraint firstItem="Lng-cT-f4n" firstAttribute="centerY" secondItem="IDb-Qw-E6o" secondAttribute="centerY" id="tts-Vd-ycx"/>
+                                        <constraint firstAttribute="bottom" secondItem="Lng-cT-f4n" secondAttribute="bottom" constant="16" id="GE8-o4-66d"/>
+                                        <constraint firstItem="j0I-uc-Ob9" firstAttribute="centerY" secondItem="IDb-Qw-E6o" secondAttribute="centerY" id="QVH-z8-gyf"/>
+                                        <constraint firstItem="Lng-cT-f4n" firstAttribute="leading" secondItem="j0I-uc-Ob9" secondAttribute="trailing" constant="8" id="Wa7-le-sjS"/>
+                                        <constraint firstItem="Lng-cT-f4n" firstAttribute="top" secondItem="IDb-Qw-E6o" secondAttribute="top" constant="16" id="YeT-mf-wPF"/>
+                                        <constraint firstAttribute="trailing" secondItem="Lng-cT-f4n" secondAttribute="trailing" constant="8" id="g3W-qM-Yg2"/>
+                                        <constraint firstItem="j0I-uc-Ob9" firstAttribute="leading" secondItem="IDb-Qw-E6o" secondAttribute="leadingMargin" constant="8" id="noJ-sX-gkv"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
