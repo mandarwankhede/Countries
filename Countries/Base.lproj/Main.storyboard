@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="A5y-lP-Ot7">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Countries-->
+        <scene sceneID="kkf-Zr-7QN">
+            <objects>
+                <tableViewController title="Countries" id="wJZ-Y4-eTO" customClass="CountriesTableViewController" customModule="Countries" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="5dn-lN-LL6">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="countryCell" rowHeight="100" id="ebO-Pe-3tx" customClass="CountryTableViewCell" customModule="Countries" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="100"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ebO-Pe-3tx" id="IDb-Qw-E6o">
+                                    <rect key="frame" x="0.0" y="0.0" width="383" height="100"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j0I-uc-Ob9">
+                                            <rect key="frame" x="7" y="15" width="342" height="21"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="21" id="b7G-Rw-lmx"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lng-cT-f4n">
+                                            <rect key="frame" x="330" y="27.5" width="45" height="45"/>
+                                            <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="45" id="C7M-JZ-hRZ"/>
+                                                <constraint firstAttribute="width" constant="45" id="Mvt-80-3tW"/>
+                                            </constraints>
+                                            <wkWebViewConfiguration key="configuration">
+                                                <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                                <wkPreferences key="preferences"/>
+                                            </wkWebViewConfiguration>
+                                        </wkWebView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="j0I-uc-Ob9" firstAttribute="top" secondItem="IDb-Qw-E6o" secondAttribute="top" constant="15" id="4Sx-Ce-rTi"/>
+                                        <constraint firstAttribute="bottom" secondItem="j0I-uc-Ob9" secondAttribute="bottom" constant="14" id="9Hh-9l-rDw"/>
+                                        <constraint firstItem="j0I-uc-Ob9" firstAttribute="leading" secondItem="IDb-Qw-E6o" secondAttribute="leading" constant="7" id="gEf-Ak-YLh"/>
+                                        <constraint firstAttribute="trailing" secondItem="Lng-cT-f4n" secondAttribute="trailing" constant="8" id="gvF-vs-HVs"/>
+                                        <constraint firstItem="Lng-cT-f4n" firstAttribute="centerY" secondItem="IDb-Qw-E6o" secondAttribute="centerY" id="tts-Vd-ycx"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="countryName" destination="j0I-uc-Ob9" id="p81-ZX-fno"/>
+                                    <outlet property="flagWebView" destination="Lng-cT-f4n" id="9yj-nV-FfC"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="wJZ-Y4-eTO" id="xZJ-H9-0W2"/>
+                            <outlet property="delegate" destination="wJZ-Y4-eTO" id="e45-jq-5zs"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Countries" id="Nx0-XW-nyx"/>
+                    <connections>
+                        <segue destination="pQa-IN-Uwh" kind="show" identifier="todetailcountryvc" id="kaw-fe-PWP"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZFO-je-c1j" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1871.0144927536232" y="137.94642857142856"/>
+        </scene>
+        <!--Country Detail View Controller-->
+        <scene sceneID="Wuj-iz-HBo">
+            <objects>
+                <viewController id="pQa-IN-Uwh" customClass="CountryDetailViewController" customModule="Countries" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="FTc-Oj-WA0">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="v08-0O-hgd">
+                                <rect key="frame" x="8" y="96" width="398" height="300"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="qn6-Xr-4cg"/>
+                                </constraints>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="pTt-Fd-8Hz">
+                                <rect key="frame" x="8" y="404" width="398" height="466"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="countryintocellid" textLabel="Sf5-7L-coV" detailTextLabel="9EO-Eg-NYu" style="IBUITableViewCellStyleSubtitle" id="eXR-Mx-hsR">
+                                        <rect key="frame" x="0.0" y="28" width="398" height="55.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="eXR-Mx-hsR" id="gaD-ve-fcv">
+                                            <rect key="frame" x="0.0" y="0.0" width="398" height="55.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Sf5-7L-coV">
+                                                    <rect key="frame" x="20" y="10" width="33.5" height="20.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="9EO-Eg-NYu">
+                                                    <rect key="frame" x="20" y="31.5" width="44" height="14.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="pQa-IN-Uwh" id="pxR-Xm-sEB"/>
+                                    <outlet property="delegate" destination="pQa-IN-Uwh" id="9YF-C3-i5V"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="flo-18-Fot" firstAttribute="trailing" secondItem="v08-0O-hgd" secondAttribute="trailing" constant="8" id="IJm-nn-NDA"/>
+                            <constraint firstItem="v08-0O-hgd" firstAttribute="top" secondItem="flo-18-Fot" secondAttribute="top" constant="8" id="ULK-gh-MV9"/>
+                            <constraint firstItem="pTt-Fd-8Hz" firstAttribute="leading" secondItem="flo-18-Fot" secondAttribute="leading" constant="8" id="VU0-jf-ZGH"/>
+                            <constraint firstItem="v08-0O-hgd" firstAttribute="leading" secondItem="flo-18-Fot" secondAttribute="leading" constant="8" id="cz7-pq-Uxa"/>
+                            <constraint firstItem="flo-18-Fot" firstAttribute="trailing" secondItem="pTt-Fd-8Hz" secondAttribute="trailing" constant="8" id="hZX-AP-e58"/>
+                            <constraint firstItem="pTt-Fd-8Hz" firstAttribute="top" secondItem="v08-0O-hgd" secondAttribute="bottom" constant="8" id="l8t-7X-PaI"/>
+                            <constraint firstItem="pTt-Fd-8Hz" firstAttribute="bottom" secondItem="flo-18-Fot" secondAttribute="bottom" constant="8" id="zmt-Dq-xD4"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="flo-18-Fot"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="ZTE-yg-BDx">
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="DTW-yx-YCr">
+                            <connections>
+                                <action selector="saveCountry:" destination="pQa-IN-Uwh" id="66w-KU-M5D"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="countryDetailsTableView" destination="pTt-Fd-8Hz" id="wu3-84-Fe7"/>
+                        <outlet property="flagWebView" destination="v08-0O-hgd" id="eRS-Ts-hdj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="N2z-wO-VD5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2669.5652173913045" y="140.625"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="ATG-Pq-fcj">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="A5y-lP-Ot7" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="x7t-q9-cLd">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="wJZ-Y4-eTO" kind="relationship" relationship="rootViewController" id="H8y-6g-tNM"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mGs-bo-X4k" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="960.86956521739137" y="137.94642857142856"/>
+        </scene>
+    </scenes>
+</document>

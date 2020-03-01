@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="15508" systemVersion="18G103" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="CountryInfo" representedClassName=".CountryInfo" syncable="YES" codeGenerationType="class">
+        <attribute name="callingcodes" optional="YES" attributeType="Transformable"/>
+        <attribute name="capital" optional="YES" attributeType="String"/>
+        <attribute name="flag" optional="YES" attributeType="String"/>
+        <attribute name="flagurl" optional="YES" attributeType="String"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="region" optional="YES" attributeType="String"/>
+        <attribute name="subregion" optional="YES" attributeType="String"/>
+        <attribute name="timezones" optional="YES" attributeType="Transformable"/>
+        <relationship name="languages" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="LanguageInfo" inverseName="nation" inverseEntity="LanguageInfo"/>
+        <uniquenessConstraints>
+            <uniquenessConstraint>
+                <constraint value="name"/>
+            </uniquenessConstraint>
+        </uniquenessConstraints>
+    </entity>
+    <entity name="LanguageInfo" representedClassName=".LanguageInfo" syncable="YES" codeGenerationType="class">
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="nativename" optional="YES" attributeType="String"/>
+        <relationship name="nation" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CountryInfo" inverseName="languages" inverseEntity="CountryInfo"/>
+    </entity>
+    <elements>
+        <element name="CountryInfo" positionX="-63" positionY="-18" width="128" height="178"/>
+        <element name="LanguageInfo" positionX="100.21484375" positionY="301.640625" width="128" height="88"/>
+    </elements>
+</model>

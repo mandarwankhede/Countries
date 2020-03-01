@@ -1,0 +1,16 @@
+/* 
+  Localizable.strings
+  Countries
+
+  Created by Mandar Wankhede New on 29/02/20.
+  Copyright © 2020 Mandar Wankhede. All rights reserved.
+*/
+
+"No_Countries_Text" = "No Countries found !";
+"Capital" = "Capital";
+"Region" = "Region";
+"SubRegion" = "SubRegion";
+"Timezones" = "Timezones";
+"CallingCodes" = "Calling Codes";
+"Languages" = "Languages";
+
