@@ -64,4 +64,10 @@ class CountryDetailViewControllerTests: XCTestCase {
         XCTAssertTrue(MockProgressHUD.showHUDAddedTo)
     }
 
+    func testNumberOfRowsInSection() {
+        let numOfrows = sut.tableView(UITableView(), numberOfRowsInSection: 0)
+
+        XCTAssertEqual(numOfrows, 7)
+    }
+
 }
