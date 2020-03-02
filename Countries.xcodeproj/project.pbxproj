@@ -10,6 +10,8 @@
 		A11FDD7B240C4642001B7466 /* MockCountryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11FDD7A240C4642001B7466 /* MockCountryView.swift */; };
 		A11FDD7D240C46BF001B7466 /* CountryPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11FDD7C240C46BF001B7466 /* CountryPresenterTests.swift */; };
 		A11FDD7F240C4782001B7466 /* MockCountryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11FDD7E240C4782001B7466 /* MockCountryModel.swift */; };
+		A1443B5E240CCB0600B7BD6D /* CountriesTableViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1443B5D240CCB0600B7BD6D /* CountriesTableViewControllerTests.swift */; };
+		A1443B60240CCB5F00B7BD6D /* MockCountriesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1443B5F240CCB5F00B7BD6D /* MockCountriesPresenter.swift */; };
 		A190F98A240B9BC400EED59B /* DatabaseServiceable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A190F989240B9BC400EED59B /* DatabaseServiceable.swift */; };
 		A190F98C240B9CA100EED59B /* CoreDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A190F98B240B9CA100EED59B /* CoreDataService.swift */; };
 		A190F9AF240BAB0A00EED59B /* CountryPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A190F9AE240BAB0A00EED59B /* CountryPresenter.swift */; };
@@ -66,6 +68,8 @@
 		A11FDD7A240C4642001B7466 /* MockCountryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockCountryView.swift; sourceTree = "<group>"; };
 		A11FDD7C240C46BF001B7466 /* CountryPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryPresenterTests.swift; sourceTree = "<group>"; };
 		A11FDD7E240C4782001B7466 /* MockCountryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockCountryModel.swift; sourceTree = "<group>"; };
+		A1443B5D240CCB0600B7BD6D /* CountriesTableViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesTableViewControllerTests.swift; sourceTree = "<group>"; };
+		A1443B5F240CCB5F00B7BD6D /* MockCountriesPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockCountriesPresenter.swift; sourceTree = "<group>"; };
 		A190F989240B9BC400EED59B /* DatabaseServiceable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseServiceable.swift; sourceTree = "<group>"; };
 		A190F98B240B9CA100EED59B /* CoreDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataService.swift; sourceTree = "<group>"; };
 		A190F9AE240BAB0A00EED59B /* CountryPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryPresenter.swift; sourceTree = "<group>"; };
@@ -186,6 +190,8 @@
 				A190F9BF240C3E0600EED59B /* CountriesPresenterTests.swift */,
 				A190F9C2240C414900EED59B /* MockDatabaseService.swift */,
 				A190F9C8240C419A00EED59B /* MockCountriesView.swift */,
+				A1443B5D240CCB0600B7BD6D /* CountriesTableViewControllerTests.swift */,
+				A1443B5F240CCB5F00B7BD6D /* MockCountriesPresenter.swift */,
 			);
 			path = Countries;
 			sourceTree = "<group>";
@@ -489,7 +495,9 @@
 				A190F9C7240C418400EED59B /* MockReachability.swift in Sources */,
 				A190F9C5240C416C00EED59B /* MockNetworkManager.swift in Sources */,
 				A11FDD7B240C4642001B7466 /* MockCountryView.swift in Sources */,
+				A1443B5E240CCB0600B7BD6D /* CountriesTableViewControllerTests.swift in Sources */,
 				A190F9C3240C414900EED59B /* MockDatabaseService.swift in Sources */,
+				A1443B60240CCB5F00B7BD6D /* MockCountriesPresenter.swift in Sources */,
 				A190F9C0240C3E0600EED59B /* CountriesPresenterTests.swift in Sources */,
 				A11FDD7D240C46BF001B7466 /* CountryPresenterTests.swift in Sources */,
 			);

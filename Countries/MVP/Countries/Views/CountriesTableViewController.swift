@@ -15,7 +15,7 @@ fileprivate struct Constants {
 }
 
 class CountriesTableViewController: UITableViewController {
-    private var countriesToDisplay = [CountryModel]() {
+    var countriesToDisplay = [CountryModel]() {
         didSet {
             DispatchQueue.main.async { self.tableView.reloadData() }
         }
