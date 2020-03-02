@@ -17,6 +17,7 @@ class CountryDetailViewController: UIViewController {
     @IBOutlet weak var flagWebView: WKWebView!    
     @IBOutlet weak var countryDetailsTableView: UITableView!
     private var countryToDisplay: CountryModel?
+    var progressHUD: MBProgressHUD.Type = MBProgressHUD.self
     var countryPresenter: CountryPresentable?
     
     override func viewDidLoad() {
@@ -75,7 +76,7 @@ extension CountryDetailViewController: CountryViewable {
     }
 
     func showToast(message: String) {
-        let toast = MBProgressHUD.showAdded(to: self.view, animated: true)
+        let toast = progressHUD.showAdded(to: self.view, animated: true)
         toast.label.text = message
         toast.mode = .text
         toast.hide(animated: true, afterDelay: 2)
