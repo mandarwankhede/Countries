@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="A5y-lP-Ot7">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -24,7 +24,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j0I-uc-Ob9">
-                                            <rect key="frame" x="28" y="30" width="239" height="20.5"/>
+                                            <rect key="frame" x="28" y="30" width="239" height="20.333333333333329"/>
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -83,33 +83,48 @@
                                 <rect key="frame" x="8" y="96" width="398" height="300"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="C1z-yg-P1t"/>
+                                    <constraint firstAttribute="width" constant="405" id="eev-Yl-csp"/>
                                     <constraint firstAttribute="height" constant="300" id="qn6-Xr-4cg"/>
                                 </constraints>
                                 <wkWebViewConfiguration key="configuration">
                                     <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
                                     <wkPreferences key="preferences"/>
                                 </wkWebViewConfiguration>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="C1z-yg-P1t"/>
+                                        <exclude reference="eev-Yl-csp"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=regular">
+                                    <mask key="constraints">
+                                        <exclude reference="C1z-yg-P1t"/>
+                                        <include reference="eev-Yl-csp"/>
+                                        <exclude reference="qn6-Xr-4cg"/>
+                                    </mask>
+                                </variation>
                             </wkWebView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="pTt-Fd-8Hz">
                                 <rect key="frame" x="8" y="404" width="398" height="466"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="countryintocellid" textLabel="Sf5-7L-coV" detailTextLabel="9EO-Eg-NYu" style="IBUITableViewCellStyleSubtitle" id="eXR-Mx-hsR">
-                                        <rect key="frame" x="0.0" y="28" width="398" height="55.5"/>
+                                        <rect key="frame" x="0.0" y="28" width="398" height="55.666667938232422"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="eXR-Mx-hsR" id="gaD-ve-fcv">
-                                            <rect key="frame" x="0.0" y="0.0" width="398" height="55.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="398" height="55.666667938232422"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Sf5-7L-coV">
-                                                    <rect key="frame" x="20" y="10" width="33.5" height="20.5"/>
+                                                    <rect key="frame" x="20.000000000000004" y="8.9999999999999982" width="33.333333333333336" height="20.333333333333332"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="9EO-Eg-NYu">
-                                                    <rect key="frame" x="20" y="31.5" width="44" height="14.5"/>
+                                                    <rect key="frame" x="19.999999999999996" y="31.333333333333332" width="43.666666666666664" height="14.333333333333334"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                     <nil key="textColor"/>
@@ -127,15 +142,51 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="v08-0O-hgd" firstAttribute="top" secondItem="flo-18-Fot" secondAttribute="top" constant="8" id="2yg-5B-OMR"/>
+                            <constraint firstItem="flo-18-Fot" firstAttribute="bottom" secondItem="v08-0O-hgd" secondAttribute="bottom" constant="8" id="CPi-wh-bEo"/>
                             <constraint firstItem="flo-18-Fot" firstAttribute="trailing" secondItem="v08-0O-hgd" secondAttribute="trailing" constant="8" id="IJm-nn-NDA"/>
+                            <constraint firstItem="pTt-Fd-8Hz" firstAttribute="leading" secondItem="v08-0O-hgd" secondAttribute="trailing" constant="8" id="IsA-iz-Cyc"/>
+                            <constraint firstAttribute="trailing" secondItem="pTt-Fd-8Hz" secondAttribute="trailing" constant="8" id="JQg-6n-dWL"/>
+                            <constraint firstItem="flo-18-Fot" firstAttribute="bottom" secondItem="pTt-Fd-8Hz" secondAttribute="bottom" constant="8" id="Pr8-aV-wrV"/>
                             <constraint firstItem="v08-0O-hgd" firstAttribute="top" secondItem="flo-18-Fot" secondAttribute="top" constant="8" id="ULK-gh-MV9"/>
                             <constraint firstItem="pTt-Fd-8Hz" firstAttribute="leading" secondItem="flo-18-Fot" secondAttribute="leading" constant="8" id="VU0-jf-ZGH"/>
                             <constraint firstItem="v08-0O-hgd" firstAttribute="leading" secondItem="flo-18-Fot" secondAttribute="leading" constant="8" id="cz7-pq-Uxa"/>
+                            <constraint firstItem="pTt-Fd-8Hz" firstAttribute="top" secondItem="flo-18-Fot" secondAttribute="top" constant="8" id="goc-cu-6AN"/>
                             <constraint firstItem="flo-18-Fot" firstAttribute="trailing" secondItem="pTt-Fd-8Hz" secondAttribute="trailing" constant="8" id="hZX-AP-e58"/>
                             <constraint firstItem="pTt-Fd-8Hz" firstAttribute="top" secondItem="v08-0O-hgd" secondAttribute="bottom" constant="8" id="l8t-7X-PaI"/>
+                            <constraint firstItem="v08-0O-hgd" firstAttribute="leading" secondItem="flo-18-Fot" secondAttribute="leading" constant="8" id="oNJ-Kx-msb"/>
                             <constraint firstItem="pTt-Fd-8Hz" firstAttribute="bottom" secondItem="flo-18-Fot" secondAttribute="bottom" constant="8" id="zmt-Dq-xD4"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="flo-18-Fot"/>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="CPi-wh-bEo"/>
+                                <exclude reference="Pr8-aV-wrV"/>
+                                <exclude reference="2yg-5B-OMR"/>
+                                <exclude reference="oNJ-Kx-msb"/>
+                                <exclude reference="IsA-iz-Cyc"/>
+                                <exclude reference="JQg-6n-dWL"/>
+                                <exclude reference="goc-cu-6AN"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=regular">
+                            <mask key="constraints">
+                                <include reference="CPi-wh-bEo"/>
+                                <exclude reference="IJm-nn-NDA"/>
+                                <include reference="Pr8-aV-wrV"/>
+                                <exclude reference="hZX-AP-e58"/>
+                                <include reference="2yg-5B-OMR"/>
+                                <exclude reference="ULK-gh-MV9"/>
+                                <exclude reference="cz7-pq-Uxa"/>
+                                <include reference="oNJ-Kx-msb"/>
+                                <include reference="IsA-iz-Cyc"/>
+                                <include reference="JQg-6n-dWL"/>
+                                <exclude reference="VU0-jf-ZGH"/>
+                                <include reference="goc-cu-6AN"/>
+                                <exclude reference="l8t-7X-PaI"/>
+                                <exclude reference="zmt-Dq-xD4"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" id="ZTE-yg-BDx">
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="DTW-yx-YCr">
@@ -151,7 +202,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="N2z-wO-VD5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2669.5652173913045" y="140.625"/>
+            <point key="canvasLocation" x="2669.1964285714284" y="140.57971014492756"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ATG-Pq-fcj">
